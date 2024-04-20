@@ -6,17 +6,25 @@ The code is constructed based on BasicSR. Before any testing or reproducing, mak
 To keep the workspace clean and simple, only test.py, train.py and your_arch.py are needed here and then you are good to go.
 
 environment：
-Python >= 3.8.0
-Pyotch >= 1.8.1
-torchvision >=0.16.1
-basicsr = 1.4.2
+
+  Python >= 3.8.0
+  
+  Pyotch >= 1.8.1
+  
+  torchvision >=0.16.1
+  
+  basicsr = 1.4.2
 
 dataset:
+
   train_Data:
+  
   DIV2K(800 images for training and 100 images for validation)
+  
   Flicker2K(2650 images)
 
   test_data:
+  
   Set5, Set14, BSDS100, Urban100, Manga109
 
 All datasets could be found in https://paperswithcode.com/datasets.
