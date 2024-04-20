@@ -25,15 +25,15 @@ More preparation for training datasets:
 
 See https://github.com/XPixelGroup/BasicSR/tree/master/basicsr/data for more details
 
-training and testing
+Training and testing:
 
-For training:
+  For training:
 
-you can run the testing demo with
->>> CUDA_VISIBLE_DEVICES=0 python code/train.py -opt options/train/MSAN_X2.yml
-
-For testing:
-
-you can run the testing demo with
->>> CUDA_VISIBLE_DEVICES=0 python code/test.py -opt options/test/MSAN_X2.yml
+  you can run the testing demo with
+  >>> CUDA_VISIBLE_DEVICES=0 python code/train.py -opt options/train/MSAN_X2.yml
+  
+  For testing:
+  
+  you can run the testing demo with
+  >>> CUDA_VISIBLE_DEVICES=0 python code/test.py -opt options/test/MSAN_X2.yml
 
