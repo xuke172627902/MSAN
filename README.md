@@ -1,6 +1,8 @@
 # MSAN
 models and codes for Multi-scale strip-shaped convolution attention network for lightweight image super-resolution (MSAN)
+
 The code is constructed based on BasicSR. Before any testing or reproducing, make sure the installation and the datasets preparation are done correctly.
+
 To keep the workspace clean and simple, only test.py, train.py and your_arch.py are needed here and then you are good to go.
 
 environment：
