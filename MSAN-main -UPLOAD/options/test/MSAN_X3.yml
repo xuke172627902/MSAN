@@ -1,0 +1,76 @@
+# general settings
+name: test_MSAN_X3
+model_type: SRModel
+scale: 3
+num_gpu: 1
+manual_seed: 0
+
+# dataset and data loader settings
+datasets:
+  val:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: D:\ablation_study\dataset\set5
+    dataroot_lq: D:\ablation_study\dataset\Set5_Scale_3
+    io_backend:
+      type: disk
+  val_1:
+    name: Set14
+    type: PairedImageDataset
+    dataroot_gt: D:\ablation_study\dataset\set14
+    dataroot_lq: D:\ablation_study\dataset\Set14_Scale_3
+    io_backend:
+      type: disk
+  val_2:
+    name: B100
+    type: PairedImageDataset
+    dataroot_gt: D:\ablation_study\dataset\BSDS100
+    dataroot_lq: D:\ablation_study\dataset\BSDS100_Scale_3
+    io_backend:
+      type: disk
+  val_3:
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: D:\ablation_study\dataset\Urban100
+    dataroot_lq: D:\ablation_study\dataset\Urban100_Scale_3
+    io_backend:
+      type: disk
+
+  val_4:
+    name: Manga109
+    type: PairedImageDataset
+    dataroot_gt: D:\ablation_study\dataset\Manga109
+    dataroot_lq: D:\ablation_study\dataset\Manga109_Scale_3
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: MSAN
+  num_in_ch: 3
+  num_feat: 40
+  d_atten: 64
+  num_block: 14
+  num_out_ch: 3
+  scale: 3
+
+# path
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+  param_key_g: 'params_ema'
+
+# validation settings
+val:
+  save_img: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 3
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 3
+      test_y_channel: true
